@@ -1,2 +1,1 @@
 # NewsWire
-NewsWireApp
