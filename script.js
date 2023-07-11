@@ -17,7 +17,7 @@ async function fetchNews(query){
     bindData(data.articles); //bind the data through this
     }
     catch{
-        alert("Due to cors error, status 426, API will not work and for that, we are working on it!");
+        alert("Some went Wrong");
     }
 }
 
