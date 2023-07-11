@@ -1,5 +1,6 @@
 const api_Key = "d3e433b82b9e4da2963c34ccf4465625";
-const url = "https://newsapi.org/v2/everything?q=";
+const url = `${proxyUrl}https://newsapi.org/v2/everything?q=`;
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
 window.addEventListener('load', ()=>fetchNews("India"));
 function reload(){
@@ -8,7 +9,7 @@ function reload(){
 async function fetchNews(query){
 
     const res = await fetch(`${url}${query}&apiKey=${api_Key}`); //fetch function returns a promise so we will use await.
-    const data = await res.json();  //wiil return a promise
+    const data = await res.json();  //will return a promise
     console.log(data);
 
     bindData(data.articles); //bind the data through this
