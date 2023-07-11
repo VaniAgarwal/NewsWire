@@ -17,7 +17,7 @@ async function fetchNews(query){
     bindData(data.articles); //bind the data through this
     }
     catch{
-        alert("Some went Wrong");
+        alert("Requests from the browser are not allowed on the Developer plan, except from localhost. Please checkout the video!");
     }
 }
 
