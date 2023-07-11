@@ -8,12 +8,16 @@ function reload(){
     window.location.reload();  //when we click on logo home page reloaded
 }
 async function fetchNews(query){
+    try{
 
     const res = await fetch(`${url}${query}&apiKey=${api_Key}`); //fetch function returns a promise so we will use await.
     const data = await res.json();  //will return a promise
     console.log(data);
 
     bindData(data.articles); //bind the data through this
+    }
+    catch{
+        alert("Due to cors error, status 426, API will not work and for that, we are working on it!");
 }
 
 function bindData(articles){
